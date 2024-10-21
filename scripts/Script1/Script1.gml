@@ -1,12 +1,9 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+var _right = keyboard_check(ord("D"));
+var _left = keyboard_check(ord("A"));
+var _up = keyboard_check(ord("W"));
+var _down = keyboard_check(ord("S"));
 
-if (keyboard_check(vk_left)){
-	
-	hspeed = -4
-}
+var _xinput = _right - _left;
+var _yinput = _down - _up;
 
-if (keyboard_check(vk_right)){
-	
-	hspeed = 4
-}
+move_and_collide(_xinput * my_speed, _yinput * my_speed, obj_dirt)

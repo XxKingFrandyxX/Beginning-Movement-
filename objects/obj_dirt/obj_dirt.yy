@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"Dirt",
+  "%Name":"obj_dirt",
   "eventList":[],
   "managed":true,
-  "name":"Dirt",
+  "name":"obj_dirt",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",

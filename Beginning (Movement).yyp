@@ -35,8 +35,8 @@
   "name":"Beginning (Movement)",
   "resources":[
     {"id":{"name":"Charater","path":"objects/Charater/Charater.yy",},},
-    {"id":{"name":"Dirt","path":"objects/Dirt/Dirt.yy",},},
     {"id":{"name":"Grass","path":"objects/Grass/Grass.yy",},},
+    {"id":{"name":"obj_dirt","path":"objects/obj_dirt/obj_dirt.yy",},},
     {"id":{"name":"Sun","path":"objects/Sun/Sun.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"Script1","path":"scripts/Script1/Script1.yy",},},
