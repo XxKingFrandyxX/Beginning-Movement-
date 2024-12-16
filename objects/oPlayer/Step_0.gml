@@ -35,13 +35,23 @@ if (keyboard_check(vk_right) or keyboard_check(ord("D")))
 	}
 }
 
-if (keyboard_check_pressed(vk_lshift) == true)
+// checking if left shift key has been pressed
+if (keyboard_check_pressed(vk_lshift))
 {
-	speed_movement = 5;
+	// if it is true then it will allow player to sprint 
+	if (true)
+	{
+		speed_movement = 10;
+	}
 }
-else
+// checking if the left sjift key is not being pressed
+if (keyboard_check_released(vk_lshift))
 {
-	speed_movement = 10;
+	// if true it will make the player walk instead of runnning 
+	if (true)
+	{
+		speed_movement = 5;
+	}
 }
 
 
