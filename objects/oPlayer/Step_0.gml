@@ -23,7 +23,7 @@ if (keyboard_check(vk_left) or keyboard_check(ord("A")))
 if (keyboard_check(vk_right) or keyboard_check(ord("D")))
 {
 	// Checking if x is on the obj_dirt
-	if (place_meeting(x + speed_movement, y, obj_dirt) == true)
+	if (place_meeting(x + speed_movement , y, obj_dirt) == true)
 	{
 		// if true then the player stop moving 
 		x = x;
@@ -52,6 +52,13 @@ if (keyboard_check_released(vk_lshift))
 	{
 		speed_movement = 5;
 	}
+}
+
+//Gravity Collosion 
+
+if (place_meeting(phy_position_x, phy_position_y + phy_speed_y, obj_dirt ) == true)
+{ 
+	phy_speed_y = 0;
 }
 
 
