@@ -1,17 +1,35 @@
 
 function backwards()
 {
-	if place_meeting(x - speed_movement, y, obj_dirt) == true
-	{	
-		x = xprevious
-		
-		if (keyboard_check(vk_right) or keyboard_check(ord("D")))
+	if (keyboard_check(vk_left) or keyboard_check(ord("A")))
+	{
+		if (place_free(x, y) == false)
 		{
 			x += speed_movement;
+			x -= 0
 		}
 	}
 }
 
+function forwards()
+{
+	if (keyboard_check(vk_right) or keyboard_check(ord("D")))
+	{
+		if (place_free(x,y) == false)
+		{
+			x -= speed_movement
+			x += 0
+		}
+	}
+}
+while keyboard_check(vk_anykey)
+{
+	show_debug_message("it works")
+	if keyboard_check(!vk_anykey)
+	{
+		break
+	}
+}
 // Check if the A or the left arrow key has been clicked
 if (keyboard_check(vk_left) or keyboard_check(ord("A")))
 {
@@ -20,6 +38,7 @@ if (keyboard_check(vk_left) or keyboard_check(ord("A")))
 	{
 		// if false allows the player to move
 		x -= speed_movement;	
+		x += 0;
 	}
 	else 
 	{
@@ -31,15 +50,15 @@ if (keyboard_check(vk_left) or keyboard_check(ord("A")))
 if (keyboard_check(vk_right) or keyboard_check(ord("D")))
 {
 	// Checking if x is on the obj_dirt
-	if (place_free(x, y) == false)
+	if (place_free(x, y) == true)
 	{
 		// if true then the player stop moving 
-		x = x;
+		x += speed_movement;
+		x -= 0;
 	}
 	else
 	{
-		// if false allows the player to move
-		x += speed_movement;
+		forwards()
 	}
 }
 
