@@ -26,7 +26,24 @@ while keyboard_check_pressed(vk_anykey) == true
 {
 	show_debug_message("it works")
 	
-	if (keyboard_check(vk_left) or keyboard_check(ord("A")))
+	
+	if (keyboard_check_released(vk_anykey)) == true
+	{		
+			show_debug_message("it gone")
+			break;
+			
+	}
+	else
+	{
+			show_debug_message("that weird")
+			break;
+		
+	}
+		
+	
+}
+
+if (keyboard_check(vk_left) or keyboard_check(ord("A")))
 	{
 		// Checking if x is on the obj_dirt
 		if (place_free(x, y) == true)
@@ -59,15 +76,8 @@ while keyboard_check_pressed(vk_anykey) == true
 			
 		}
 	}
-	if (keyboard_check_released(vk_anykey)) == true
-	{		
-			break;
-	}
-	else
-	{
-	}
 	
-}
+	
 // Check if the A or the left arrow key has been clicked
 
 
