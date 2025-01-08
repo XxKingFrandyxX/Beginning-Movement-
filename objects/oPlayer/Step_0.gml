@@ -1,4 +1,4 @@
-
+/*
 function backwards()
 {
 	if (keyboard_check(vk_left) or keyboard_check(ord("A")))
@@ -11,6 +11,7 @@ function backwards()
 	}
 }
 
+
 function forwards()
 {
 	if (keyboard_check(vk_right) or keyboard_check(ord("D")))
@@ -22,6 +23,9 @@ function forwards()
 		}
 	}
 }
+*/
+
+/*
 while keyboard_check_pressed(vk_anykey) == true
 {
 	show_debug_message("it works")
@@ -42,25 +46,45 @@ while keyboard_check_pressed(vk_anykey) == true
 		
 	
 }
-
-if (keyboard_check(vk_left) or keyboard_check(ord("A")))
+*/
+if (keyboard_check(vk_left) or keyboard_check(ord("A") or keyboard_check(ord("D")) or keyboard_check(vk_right) ))
 	{
-		// Checking if x is on the obj_dirt
-		if (place_free(x, y) == true)
+		if (keyboard_check(vk_left) or keyboard_check(ord("A")) == true)
 		{
-			// if false allows the player to move
-			x -= speed_movement;	
-			x += 0;
-			
+			if (place_free(x, y) == true)
+			{	// if false allows the player to move
+				x -= speed_movement;
+				x += 0;					
+			}
+			else
+			{
+				if ((keyboard_check(ord("D")) or keyboard_check(vk_right)) == true)
+				{
+						x += speed_movement;
+						x -= 0;	
+				}
+			}
 		}
-		else 
+		
+		if ((keyboard_check(ord("D")) or keyboard_check(vk_right)) == true)
 		{
-			backwards()
-			
-		}
-	
+			if (place_free(x, y) == true)
+			{
+				x += speed_movement;
+				x -= 0;	
+			}
+			else
+			{
+				if (keyboard_check(vk_left) or keyboard_check(ord("A")) == true)
+				{
+					x -= speed_movement;
+					x += 0;					
+				}
+			}
+		}				
 	}
 	// check if the D or right arrow key has been pressed
+	/*
 	if (keyboard_check(vk_right) or keyboard_check(ord("D")))
 	{
 		// Checking if x is on the obj_dirt
@@ -72,10 +96,11 @@ if (keyboard_check(vk_left) or keyboard_check(ord("A")))
 		}
 		else
 		{
-			forwards()
+			//forwards()
 			
 		}
 	}
+	*/
 	
 	
 // Check if the A or the left arrow key has been clicked
