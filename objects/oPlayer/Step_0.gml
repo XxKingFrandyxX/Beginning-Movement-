@@ -1,29 +1,37 @@
-/*
+
 function backwards()
 {
-	if (keyboard_check(vk_left) or keyboard_check(ord("A")))
+	while x = x
 	{
-		if (place_free(x, y) == false)
+		if (keyboard_check(vk_left) or keyboard_check(ord("A")) == true)
 		{
-			x += speed_movement;
-			x -= 0
+			if (place_free(x, y) == false)
+			{	// if false allows the player to move
+				x -= speed_movement;				
+			}
 		}
+	show_debug_message("vack")	
+	break; 
 	}
 }
 
 
 function forwards()
 {
-	if (keyboard_check(vk_right) or keyboard_check(ord("D")))
+	while x = x
 	{
-		if (place_free(x,y) == false)
+		if (keyboard_check(vk_right) or keyboard_check(ord("D")) == true)
 		{
-			x -= speed_movement
-			x += 0
+			if (place_free(x, y) == false)
+			{	// if false allows the player to move
+				x += speed_movement;				
+			}
 		}
+	show_debug_message("forward")		
+	break; 
 	}
 }
-*/
+
 
 /*
 while keyboard_check_pressed(vk_anykey) == true
@@ -47,39 +55,32 @@ while keyboard_check_pressed(vk_anykey) == true
 	
 }
 */
+
 if (keyboard_check(vk_left) or keyboard_check(ord("A") or keyboard_check(ord("D")) or keyboard_check(vk_right) ))
 	{
 		if (keyboard_check(vk_left) or keyboard_check(ord("A")) == true)
-		{
+		{				
 			if (place_free(x, y) == true)
 			{	// if false allows the player to move
-				x -= speed_movement;
-				x += 0;					
+				x -= speed_movement;				
 			}
 			else
 			{
-				if ((keyboard_check(ord("D")) or keyboard_check(vk_right)) == true)
-				{
-						x += speed_movement;
-						x -= 0;	
-				}
+				x += 0
+				forwards()
 			}
 		}
 		
 		if ((keyboard_check(ord("D")) or keyboard_check(vk_right)) == true)
-		{
+		{		
 			if (place_free(x, y) == true)
 			{
-				x += speed_movement;
-				x -= 0;	
+				x += speed_movement;	
 			}
 			else
 			{
-				if (keyboard_check(vk_left) or keyboard_check(ord("A")) == true)
-				{
-					x -= speed_movement;
-					x += 0;					
-				}
+				x -= 0 
+				backwards()
 			}
 		}				
 	}
